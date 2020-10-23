@@ -1,10 +1,10 @@
 {
   "name": "tiltify",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Tiltify API Interface",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/app.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/Cazgem/tiltify/issues"
   },
-  "homepage": "https://github.com/Cazgem/tiltify#readme"
+  "homepage": "https://github.com/Cazgem/tiltify#readme",
+  "dependencies": {
+    "promise": "^8.1.0",
+    "tmi.js": "^1.5.0"
+  }
 }
