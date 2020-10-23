@@ -1,6 +1,6 @@
 {
   "name": "tiltify",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Tiltify API Interface",
   "main": "index.js",
   "scripts": {

@@ -1,4 +1,4 @@
-
+// Tiltify v 0.1.1
 const Campaign = require('./lib/campaigns')
 // const Cause = require('./lib/cause')
 // const FundraisingEvents = require('./lib/fundraisingEvents')
