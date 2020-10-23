@@ -1,29 +1,19 @@
-//Tiltify v 0.1
-const request = require(`request`);
-const Promise = require('promise');
+// Tiltify v 0.1.1
+const Campaign = require('./lib/campaigns')
+// const Cause = require('./lib/cause')
+// const FundraisingEvents = require('./lib/fundraisingEvents')
+// const Team = require('./lib/team')
+// const User = require('./lib/user')
+
+version = `0.1.1`;
+class Tiltify {
+    constructor(access_token) {
+        this.access_token = access_token;
+        this.Campaigns = new Campaign(this)
+        // this.Causes = new Cause(this)
+        // this.FundraisingEvents = new FundraisingEvents(this)
+        // this.Team = new Team(this)
+        // this.User = new User(this)
+    }
+}
 module.exports = Tiltify;
-function Tiltify(tiltifyOpts) {
-    this.version = `0.1.0`;
-    this.apiURL = `https://tiltify.com/api/v3/`;
-    this.access_token = tiltifyOpts.access_token;
-}
-Tiltify.prototype.test = function (tiltifyOpts) {
-    console.log(`Tiltify Module Initialized`);
-}
-Tiltify.prototype.test = function (tiltifyOpts) {
-    const opts = {
-        url: `https://api.twitch.tv/helix/users?login=${user}`,
-        headers: {
-            'Authorization': `Bearer ${that.OAuth}`,
-            'Client-ID': `${results.client_id}`
-        }
-    };
-    request(opts, function (error, response, body) {
-        if (!error && response.statusCode == 200) {
-            const info = JSON.parse(body);
-            return callback(null, info.data[0]);
-        } else (
-            console.log(`ERROR in USERID! ${JSON.stringify(response)}`)
-        )
-    });
-}
