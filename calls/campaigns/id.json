@@ -1,0 +1,47 @@
+{
+    "meta": {
+        "status": 200
+    },
+    "data": {
+        "id": 76910,
+        "name": "CiaS Breast Cancer Awareness Event",
+        "slug": "cias-breast-cancer-charity-event",
+        "startsAt": 1603026184000,
+        "endsAt": 1603072672000,
+        "description": "A Special edition of Cities in a Snap where four ladies will attempt to build the best cities they can in just two hours' time FOR CHARITY!",
+        "causeId": 899,
+        "originalFundraiserGoal": 2000.0,
+        "fundraiserGoalAmount": 2000.0,
+        "supportingAmountRaised": 0.0,
+        "amountRaised": 1631.0,
+        "supportable": false,
+        "status": "retired",
+        "type": "Event",
+        "avatar": {
+            "src": "https://assets.tiltify.com/uploads/cause/avatar/899/bcrf-avatar-1570460101260.png",
+            "alt": "",
+            "width": 200,
+            "height": 200
+        },
+        "livestream": {
+            "type": "twitch",
+            "channel": "citiesinasnap"
+        },
+        "causeCurrency": "USD",
+        "totalAmountRaised": 1631.0,
+        "user": {
+            "id": 158085,
+            "username": "citiesinasnap",
+            "slug": "citiesinasnap",
+            "url": "https://tiltify.com/@citiesinasnap",
+            "avatar": {
+                "src": "https://assets.tiltify.com/assets/default-avatar.png",
+                "alt": "",
+                "width": 200,
+                "height": 200
+            }
+        },
+        "regionId": null,
+        "metadata": {}
+    }
+}
