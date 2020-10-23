@@ -27,9 +27,13 @@ const client = new tmi.client(config);
 
 ### Implement and Call the Class
 ```javascript
-const tiltify = require(`tiltify`);
+let tiltifyOpts = {
+    access_token: `************************************************`,
+    campaign_id: `*****`
+}
+const Tiltify = require(`tiltify`);
 // Call once per command
-const twitchCPR = new Twitch_CPR(twitchCPRopts, config.default.channel_id, config.default.streamer);
+const tiltify = new Tiltify(tiltifyOpts.access_token);
 ```
 
 ## USE
