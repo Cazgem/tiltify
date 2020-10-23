@@ -36,34 +36,12 @@ const twitchCPR = new Twitch_CPR(twitchCPRopts, config.default.channel_id, confi
 
 ### Campaigns
 ```javascript
-tiltify.campaigns([`donations`], function (err, results) {
-    results.forEach(data => {
+tiltify.Campaigns.getLastDonation(`*****`, function (err, data) {
         if (data.comment) {
             client.action(channel, `${data.name} donated $${data.amount}! "${data.comment}"`)
         } else {
             client.action(channel, `${data.name} donated $${data.amount}! curseLit`)
         }
-    })
-});
-```
-
-```javascript
-tiltify.campaigns(`rewards`, function (err, results) {
-    results.forEach(data => {
-        console.log(`${data.name}: ${data.fairMarketValue} ${data.currency} | "${data.description}"`)
-    })
-});
-```
-
-```javascript
-tiltify.campaigns(`polls`, function (err, results) {
-    results.forEach(data => {
-        if (data.comment) {
-            console.log(`${data.name}: ${data.amount} | "${data.comment}"`)
-        } else {
-            console.log(`${data.name}: ${data.amount}`)
-        }
-    })
 });
 ```
 
