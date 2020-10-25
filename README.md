@@ -6,8 +6,8 @@ If you like what you see, consider visiting my patreon, or visit my twitch page 
 
 This is under very heavy development. Please visit GitHub for up-to-date developments as we push toward release.
 
-### What's New?
-
+### What's New in 0.2 Alpha?
+Campaigns Module Implemented with basic endpoints (Documentation is slightly behind here) as well as a "fetch" protocol to acquire individual information bits such as name, description, etc. about individual campaigns.
 
 ## Installation
 
@@ -54,6 +54,22 @@ tiltify.Campaigns.getRewards(tiltifyOpts.campaign_id, function (err, result) {
     result.forEach((data) => {
         client.action(channel, `${data.name} Unlocked! ${data.remaining} Remain to be claimed! curseLit`)
     }
+});
+```
+
+### Fetch Protocol (Campaigns)
+
+Option 1 [multi-point fetch]
+```javascript
+tiltify.Campaigns.fetch(tiltifyOpts.campaign_id, function (err, result) {
+        client.action(channel, `Currently Raising Money for ${data.name}! DOnate here: ${data.url}`)
+});
+```
+
+Option 2 [Single-point fetch]
+```javascript
+tiltify.Campaigns.fetch(`name`, tiltifyOpts.campaign_id, function (err, result) {
+        client.action(channel, `Currently Raising Money for ${data}! Donate at the link below.`)
 });
 ```
 
