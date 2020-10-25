@@ -1,4 +1,4 @@
-# Tiltify 0.1.1
+# Tiltify 0.2.0
 
 This helper for Tiltify is meant to act as an extension streamers' twitch bots in order to make interfacing with the Tiltify Donations platform more easily.
 
@@ -40,12 +40,20 @@ const tiltify = new Tiltify(tiltifyOpts.access_token);
 
 ### Campaigns
 ```javascript
-tiltify.Campaigns.getLastDonation(tiltifyOpts.campaign_id, function (err, data) {
-        if (data.comment) {
-            client.action(channel, `${data.name} donated $${data.amount}! "${data.comment}"`)
+tiltify.Campaigns.getLastDonation(tiltifyOpts.campaign_id, function (err, result) {
+        if (result.comment) {
+            client.action(channel, `Last Donation: ${result.name} donated $${result.amount}! "${result.comment}"`)
         } else {
-            client.action(channel, `${data.name} donated $${data.amount}! curseLit`)
+            client.action(channel, `Last Donation: ${result.name} donated $${result.amount}! curseLit`)
         }
+});
+```
+
+```javascript
+tiltify.Campaigns.getRewards(tiltifyOpts.campaign_id, function (err, result) {
+    result.forEach((data) => {
+        client.action(channel, `${data.name} Unlocked! ${data.remaining} Remain to be claimed! curseLit`)
+    }
 });
 ```
 
