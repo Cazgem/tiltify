@@ -4,7 +4,7 @@ This helper for Tiltify is meant to act as an extension streamers' twitch bots i
 
 If you like what you see, consider visiting my patreon, or visit my twitch page for a paypal donation link. 
 
-This is under very heavy development. Please visit GitHub for up-to-date developments as we push toward release.
+This is under VERY heavy development. Please visit GitHub for up-to-date developments as we push toward release.
 
 ### What's New in 0.3 Alpha?
 Causes Module Implemented with Fetch Endpoint to begin with, further functionality to come. (Documentation is slightly behind here) This "fetch" protocol to acquire individual information bits such as name, description, etc. about individual campaigns.
